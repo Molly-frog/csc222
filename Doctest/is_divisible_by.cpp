@@ -2,7 +2,7 @@
 #include <doctest.h>
 using namespace std;
 
-int is_divisible_by(int n, int d) {
+bool is_divisible_by(int n, int d) {
     if (n % d == 0) {
         return true;
     } else {
