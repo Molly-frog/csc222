@@ -1,6 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <string>
 #include <doctest.h>
+#include <cmath>
 using namespace std;
 
 struct Point {
@@ -9,7 +10,7 @@ struct Point {
 };
 
 int distance_from_origin(Point p) {
-    return p.x * p.x + p.y * p.y;
+    return sqrt(p.x * p.x + p.y * p.y);
 }
 
 
