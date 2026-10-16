@@ -5,26 +5,30 @@
 using namespace std;
 
 struct Point {
-    double x;
-    double y;
+    int x;
+    int y;
 };
 
 struct Rectangle{
-    Point upr;
-    Point upl;
-    Point lowr;
-    Point lowl;
+    Point upright;
+    Point upleft;
+    Point lowright;
+    Point lowleft;
 };
 
-int lower_right(Rectangle r) {
-    cout << "( " << r.lowr.x << " , " << r.lowr.y << " )" << endl;
-    return 0;
+int distance_from_points(Point p1, Point p2) {
+    return sqrt(pow((p2.x - p1.x), 2) * pow((p2.y - p1.y), 2));
+}
+
+int area_rectangle(int length, int width){
+    return length * width;
 }
 
 
-
-
-TEST_CASE("distance_from_origin(p) returns p's distance from (0,0) ") {
-    Rectangle r = {{3, 4}, {7,8}, {3,1}, {7,4}};
-    CHECK(lower_right(r) == "(r.lowr.x , r.lowr.y)");
+int main(){
+    Rectangle r = {{2,0}, {6,0}, {2,2}, {6,2}};
+    int length = distance_from_points(r.lowleft.x, r.lowright.x);
+    int width = distance_from_points(r.upright.y, r.lowright.y);
+    int area = area_rectangle(length, width);
 }
+
