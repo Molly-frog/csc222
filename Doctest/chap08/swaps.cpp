@@ -14,7 +14,7 @@ void pointer(char* x, char* t) {
     *x = *t;
     *t = temp;
 
-    std::cout << "x: " << x << ", t: " << t << std::endl; 
+    std::cout << "x: " << *x << ", t: " << *t << std::endl; 
 }
 
 void normal(int m, int j) {
