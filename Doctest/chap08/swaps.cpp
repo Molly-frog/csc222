@@ -6,7 +6,7 @@ void reference(int& m, int& j) {
     m = j;
     j = temp;
 
-    std::cout << "m: " << m << ", j: " << j << std::endl; 
+    cout << "m: " << m << ", j: " << j << endl; 
 }
 
 void pointer(char* x, char* t) {
@@ -14,7 +14,7 @@ void pointer(char* x, char* t) {
     *x = *t;
     *t = temp;
 
-    std::cout << "x: " << *x << ", t: " << *t << std::endl; 
+    cout << "x: " << *x << ", t: " << *t << endl; 
 }
 
 void normal(int m, int j) {
@@ -22,7 +22,7 @@ void normal(int m, int j) {
     m = j;
     j = temp;
 
-    std::cout << "m: " << m << ", j: " << j << std::endl; 
+    cout << "m: " << m << ", j: " << j << endl; 
 }
 
 
