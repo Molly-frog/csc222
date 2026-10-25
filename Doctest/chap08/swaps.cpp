@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-void reference(int& a, int& b) {
-    int temp = a;
-    a = b;
-    b = temp;
+void reference(int& m, int& j) {
+    int temp = m;
+    m = j;
+    j = temp;
 }
 
-void pointer(char* a, char* b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
+void pointer(char* x, char* t) {
+    int temp = *x;
+    *x = *t;
+    *t = temp;
 }
 
-void normal(int a, int b) {
-    int temp = a;
-    a = b;
-    b = temp;
+void normal(int m, int j) {
+    int temp = m;
+    m = j;
+    j = temp;
 }
 
 
