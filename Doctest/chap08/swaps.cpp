@@ -5,18 +5,24 @@ void reference(int& m, int& j) {
     int temp = m;
     m = j;
     j = temp;
+
+    std::cout << "m: " << m << ", j: " << j << std::endl; 
 }
 
 void pointer(char* x, char* t) {
     int temp = *x;
     *x = *t;
     *t = temp;
+
+    std::cout << "x: " << x << ", t: " << t << std::endl; 
 }
 
 void normal(int m, int j) {
     int temp = m;
     m = j;
     j = temp;
+
+    std::cout << "m: " << m << ", j: " << j << std::endl; 
 }
 
 
@@ -24,8 +30,14 @@ int main() {
     int m = 4, j = 10;
     char x = 'x', t = 't';
     
+    cout << "before reference swap: " << endl;
     normal(m, j);
+    
+    cout << "after reference swap: " << endl;
     reference(m, j);
+
+    cout << "after pointer swap: " << endl;
     pointer(&x, &t);
+    
     return 0;
 }
