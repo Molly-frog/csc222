@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
+#include <cstring>
 
-int str_len(char* str1){
-    int length = strlen(str1);   
-    return length;
+size_t str_len(char* str1){
+    return std::strlen(str1);   
 }
 
 int main() {
