@@ -21,4 +21,11 @@ void normal(int a, int b) {
 
 
 int main() {
+    int m = 4, j = 10;
+    char x = 'x', t = 't';
+    
+    normal(m, j);
+    reference(m, j);
+    pointer(&x, &t);
+    return 0;
 }
