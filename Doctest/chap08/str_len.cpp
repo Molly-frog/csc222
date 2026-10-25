@@ -7,4 +7,8 @@ int str_len(char* str1){
 }
 
 int main() {
+    char julia[] = "Julia is amazing";
+    std::cout << "Length: " << str_len(julia) << std::endl;
+
+    return 0;
 }
