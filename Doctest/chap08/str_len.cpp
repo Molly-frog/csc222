@@ -5,7 +5,7 @@ using namespace std;
 size_t str_len(char* str1){
    size_t result = -1;
 
-   for (int i; i < INT_MAX; ++1) {
+   for (int i; i < INT_MAX; ++i) {
     if (str1[i] == '\0') {
         result = i;
         break;
