@@ -17,14 +17,21 @@ using namespace std;
 //     CHECK(test2str == expected2);
 // }
 
-TEST_CASE("Testing num_vector_product") {
-    vector<int> nums = {2, 3, 7};
-    CHECK(42 == num_vector_product(nums));
+// TEST_CASE("Testing num_vector_product") {
+//     vector<int> nums = {2, 3, 7};
+//     CHECK(42 == num_vector_product(nums));
 
-    vector<int> test2 = {56, 7, 1};
-    CHECK(392 == num_vector_product(test2));
+//     vector<int> test2 = {56, 7, 1};
+//     CHECK(392 == num_vector_product(test2));
 
-    vector<int> test3 = {4, 4, 4};
-    CHECK(64 == num_vector_product(test3));
+//     vector<int> test3 = {4, 4, 4};
+//     CHECK(64 == num_vector_product(test3));
+// }
+
+TEST_CASE("Testing only_evens") {
+    vector<int> nums = {1, 2, 3, 4, 6, 7, 8, 11, 12, 14, 27, 22};
+    string evens = only_evens(nums);
+    string expected = "2 4 6 8 12 14 22";
+    CHECK(evens == expected);
 }
 

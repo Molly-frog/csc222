@@ -26,3 +26,8 @@ int num_vector_product(const vector<int>& nums) {
 
    return i;
 }
+
+string only_evens(const vector<int>& nums) {
+    string s = "";
+    return s;
+}
