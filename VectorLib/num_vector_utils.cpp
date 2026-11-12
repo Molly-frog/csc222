@@ -16,11 +16,13 @@ string render_num_vector(const vector<int>& nums) {
 }
 
 int num_vector_product(const vector<int>& nums) {
-    int i = 0;
+    int i = 1;
 
     for (const int& v : nums){
         i *= v;
     }
+
+    cout << i << endl;
 
    return i;
 }
