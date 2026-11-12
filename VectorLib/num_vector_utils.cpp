@@ -4,15 +4,19 @@ using namespace std;
 
 string render_num_vector(const vector<int>& nums) {
     string s = "";
-
-   for (const int& v : nums){
+    
+    for (const int& v : nums){
         s += to_string(v);
         s += " ";
-   }
+    }
+    
+    s.pop_back();
+   
+   return s;
+}
 
-   s.pop_back();
+string num_vector_product(const vector<int>& nums) {
+    string s = "";
 
-   cout << s << endl;
-
-    return s;
+   return s;
 }
