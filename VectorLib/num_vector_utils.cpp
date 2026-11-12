@@ -15,8 +15,8 @@ string render_num_vector(const vector<int>& nums) {
    return s;
 }
 
-string num_vector_product(const vector<int>& nums) {
-    string s = "";
+int num_vector_product(const vector<int>& nums) {
+    int s = 0;
 
    return s;
 }
