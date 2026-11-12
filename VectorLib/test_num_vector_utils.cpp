@@ -25,6 +25,6 @@ TEST_CASE("Testing num_vector_product") {
     CHECK(392 == num_vector_product(test2));
 
     vector<int> test3 = {4, 4, 4};
-    CHECK(896 == num_vector_product(test3));
+    CHECK(64 == num_vector_product(test3));
 }
 
