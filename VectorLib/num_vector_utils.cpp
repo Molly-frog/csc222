@@ -29,5 +29,17 @@ int num_vector_product(const vector<int>& nums) {
 
 string only_evens(const vector<int>& nums) {
     string s = "";
+
+    //nums = {1, 2, 3, 4, 6, 7, 8, 11, 12, 14, 27, 22};
+
+    for (int i = 0; i < nums.size(); i = i + 2){
+        s += to_string(i);
+        s += " ";
+    }
+    
+    s.pop_back();
+
+    cout << s << endl;
+
     return s;
 }
