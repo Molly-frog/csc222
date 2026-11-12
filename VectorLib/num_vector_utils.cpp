@@ -31,10 +31,13 @@ string only_evens(const vector<int>& nums) {
     string s = "";
 
     //nums = {1, 2, 3, 4, 6, 7, 8, 11, 12, 14, 27, 22};
+    //expected = "2 4 6 8 12 14 22";
 
-    for (int i = 0; i < nums.size(); i = i + 2){
-        s += to_string(i);
-        s += " ";
+    for (const int& v : nums){
+        if (v % 2 == 0){
+            s += to_string(v);
+            s += " ";
+        }
     }
     
     s.pop_back();
