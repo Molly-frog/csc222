@@ -20,5 +20,11 @@ using namespace std;
 TEST_CASE("Testing num_vector_product") {
     vector<int> nums = {2, 3, 7};
     CHECK(42 == num_vector_product(nums));
+
+    vector<int> test2 = {56, 7, 1};
+    CHECK(392 == num_vector_product(test2));
+
+    vector<int> test3 = {4, 4, 4};
+    CHECK(896 == num_vector_product(test3));
 }
 
