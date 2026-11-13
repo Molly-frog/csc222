@@ -2,6 +2,7 @@
 #include <cstdlib> // Required for rand() and srand()
 #include <ctime>   // Required for time()
 using namespace std;
+
 void shuffle(int array[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -18,13 +19,22 @@ void shuffle(int array[], int size)
     cout << endl;
 }
 
-int main() {
-    srand(time(0)); 
-    int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
- cout << "Original array: ";
-    for (int element : array) {
-        cout << element << " ";
+char* shuffle2(const char array[], int size){
+    char* new_array = (char*)malloc(size * sizeof(char));
+    if (new_array == nullptr) {
+        return nullptr;
     }
-    cout << endl;
-shuffle(array, 10);
+
+    for (int i = 0; i < size; i++) {
+        int randomIndex = i + rand() % (size - i);
+        char temp = new_array[i];
+        new_array[i] = new_array[randomIndex];
+        new_array[randomIndex] = temp;
+    }
+
+    return new_array;
+}
+
+int main() {
+    
 }

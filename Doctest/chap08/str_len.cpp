@@ -16,8 +16,8 @@ size_t str_len(char* str1){
 }
 
 int main() {
-    char julia[] = "Julia is amazing";
-    cout << "Length: " << str_len(julia) << endl;
+    char random[] = "My programming career is low-key over";
+    cout << "Length: " << str_len(random) << endl;
 
     return 0;
 }
