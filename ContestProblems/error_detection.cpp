@@ -2,10 +2,11 @@
 #include <doctest.h>
 #include <iostream>
 #include <iomanip>
+#include <bitset>
 
 using namespace std;
 
-bool ErrorDetection(int value, int checkbit){
+bool solveErrorDetection(int value, int checkbit){
   // int one_count = 0;
   // int total_bits = sizeof(int) * 8;
   //  int molly = 0;
@@ -43,13 +44,13 @@ bool ErrorDetection(int value, int checkbit){
     }
   }
 
-  valid = (one_count )
+  valid = (one_count % 2 == checkbit);
 
-
+  return valid;
 }
 
 
 int main(){
-  ErrorDetection(135, 1);
+  solveErrorDetection(135, 1);
 }
 
