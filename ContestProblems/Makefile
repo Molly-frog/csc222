@@ -1,17 +1,17 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -g
-TARGET = error_detection
-SRC = error_detection.cpp
+CXXFLAGS = -Wall -Wextra -pedantic -std=c++17 -I.
 
-all: $(TARGET)
+TARGETS = error_detection
 
-$(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+all: $(TARGETS)
 
-run: $(TARGET)
-	./$(TARGET)
+error_detection: error_detection.o
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+error_detection.o: error_detection.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(TARGETS) *.o
 
-.PHONY: all run clean
+.PHONY: all clean
