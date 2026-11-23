@@ -9,7 +9,7 @@ bool solveErrorDetection(int value, int checkbit){
   int one_count = 0;
   
   for (int i = 0; i < 16; ++i){
-    if ((value & (i << i)) == 1){
+    if ((value & (i << 1)) == 1){
       one_count++;  
     }  
   }
@@ -21,6 +21,8 @@ bool solveErrorDetection(int value, int checkbit){
 
 
 TEST_CASE("solveErrorDetection(int value, int checkbit)"){
-  CHECK(solveErrorDetection(45, 1) == false);
-  CHECK(solveErrorDetection(15, 0) == true);
+  CHECK(solveErrorDetection(34173, 1) == true); // Valid because it has an odd # of 1s
+  CHECK(solveErrorDetection(45, 1) == false);   // Corrupt because it has an even # of 1s, so it was expecting 0
+  CHECK(solveErrorDetection(15, 0) == true);    // Valid because it has an even # of 1s
+  CHECK(solveErrorDetection(31, 0) == false);   // Corrupt because it has an odd # of 1s, so it was expecting 1
 }
