@@ -5,26 +5,26 @@
 using namespace std;
 
 bool solveErrorDetection(int value, int checkbit){
-  bool valid = false;
   int one_count = 0;
-
-  string bitstring = bitset<16>(value).to_string();
-
-  for (std::size_t i = 0; i < bitstring.length(); i++){
-    if (bitstring[i] == '1'){
-      one_count++;
-    }
+  bool valid = false;
+  
+  for (int i = 0; i < 16; ++i){
+   if ((value & (1 << i)) != 0){
+     one_count++; 
+   }
   }
 
-  valid = (one_count % 2 == checkbit);
-    if (valid == 1){
-        std::cout << "valid" << std:: endl;
-    } else{
-      
-       std::cout << "corrupted" << std:: endl;
-    }
+  int expectedbit = one_count % 2;
 
-  return valid;
+  valid = (one_count % 2 == checkbit);
+    
+  if (valid == 1){
+    cout << "valid" << endl;
+  } else{
+    cout << "corrupted" << endl;
+  }
+
+  return expectedbit == checkbit;
 }
 
 TEST_CASE("solveErrorDetection(int value, int checkbit)"){
