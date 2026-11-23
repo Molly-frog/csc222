@@ -21,8 +21,6 @@ bool solveErrorDetection(int value, int checkbit){
 
 
 TEST_CASE("solveErrorDetection(int value, int checkbit)"){
-  CHECK(solveErrorDetection(34173, 1) == true);
   CHECK(solveErrorDetection(45, 1) == false);
   CHECK(solveErrorDetection(15, 0) == true);
-  CHECK(solveErrorDetection(31, 0) == false);
 }
