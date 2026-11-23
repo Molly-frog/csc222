@@ -4,21 +4,28 @@
 #include <iostream>
 using namespace std;
 
-
 bool solveErrorDetection(int value, int checkbit){
+  bool valid = false;
   int one_count = 0;
-  
-  for (int i = 0; i < 16; ++i){
-    if ((value & (i << 1)) == 1){
-      one_count++;  
-    }  
-  }
-  
-  int expectedbit = one_count % 2;
-  
-  return expectedbit == checkbit;
-}
 
+  string bitstring = bitset<16>(value).to_string();
+
+  for (std::size_t i = 0; i < bitstring.length(); i++){
+    if (bitstring[i] == '1'){
+      one_count++;
+    }
+  }
+
+  valid = (one_count % 2 == checkbit);
+    if (valid == 1){
+        std::cout << "valid" << std:: endl;
+    } else{
+      
+       std::cout << "corrupted" << std:: endl;
+    }
+
+  return valid;
+}
 
 TEST_CASE("solveErrorDetection(int value, int checkbit)"){
   CHECK(solveErrorDetection(34173, 1) == true); // Valid because it has an odd # of 1s
