@@ -14,8 +14,6 @@ bool solveErrorDetection(int value, int checkbit){
    }
   }
 
-  int expectedbit = one_count % 2;
-
   valid = (one_count % 2 == checkbit);
     
   if (valid == 1){
@@ -24,7 +22,7 @@ bool solveErrorDetection(int value, int checkbit){
     cout << "corrupted" << endl;
   }
 
-  return expectedbit == checkbit;
+  return valid;
 }
 
 TEST_CASE("solveErrorDetection(int value, int checkbit)"){
