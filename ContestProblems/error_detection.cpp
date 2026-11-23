@@ -16,7 +16,7 @@ bool solveErrorDetection(int value, int checkbit){
 
   valid = (one_count % 2 == checkbit);
     
-  if (valid == 1){
+  if (valid){
     cout << "valid" << endl;
   } else{
     cout << "corrupted" << endl;
